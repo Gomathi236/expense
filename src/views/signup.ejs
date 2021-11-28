@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Signuppage</title>
+        <link rel="stylesheet" href="/public/css/signup.css" type="text/css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    </head>
+
+    <body>
+        
+        <div class="box">
+    <form method="POST" action="/signup" class="form">
+        <div>
+           
+            <% if(errors) { %>
+                <% errors.forEach((item) => { %>
+                    <div class="alert">
+                        <%- item %>
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+       
+        <h1><b>SIGN UP</b></h1>
+        <div>
+            <label for="fullname">Full Name</label><br/>
+            <input type="text" name="fullName" id="fullName" class="input-field" required>
+        </div>
+        <br/>
+       
+        <div>
+            <label for="email">Email</label><br/>
+            <input type="email" id="email" name="email"   class="input-field"required placeholder="Enter your Email">
+        </div>
+        <br/>
+        <div>
+            <label for="password">Password</label><br/>
+            <input type="password" id="password" class="input-field" name="password" placeholder="password">
+        </div>
+        <br/>
+        <div>
+            <label for="confirmationpassword">Confirm Password</label><br/>
+            <input type="password" id="confirmationpassword" class="input-field" name="confirmationpassword" placeholder="confirm password">
+        </div>
+        <br/>
+        <div>
+            <label><input type="checkbox">Subscribe to my news letter</label>
+        </div>
+        <br/>
+        <div>
+            <label><input type="checkbox" required>I agree to the terms and conditions</label>
+        </div>
+        <br/>
+
+        <div>
+            <button type="submit" class="btn">SIGNUP</button>
+        </div>
+    </form>
+    
+    </div>
+    </body>
+</html>

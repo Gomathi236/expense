@@ -1,0 +1,63 @@
+1. create table
+
+
+incomes 
+- id
+    - date
+    - type_id 
+    - amount
+    - description
+    - created_at
+    - updated_at
+
+income_types
+- id
+    - type 
+    - created_at
+    - updated_at
+
+expenses
+- id
+    - date
+    - type_id
+    - amount
+    - description
+        - created_at
+    - updated_at
+
+expense_types
+- id
+    - type
+    - description
+    - amount
+    - budget 
+        - created_at
+    - updated_at
+
+2. income source 
+
+3. income page ->
+
+
+router.get("/income", function (req, res, next) {
+
+
+
+ let incomeTypes = //  get id and type from income_types table and store in this variable
+  
+  res.render("income", { incomeTypes: incomeTypes });
+});
+
+4. income.ejs
+
+for loop in ejs template
+
+incomeTypes loop -> income.id and income.type display
+
+<% if(errors) { %>
+                            <% errors.forEach((incometypes) => { %>
+                                <option class="alert"></option>
+                                    <%- item %>
+                                </div>
+                            <% }); %>
+                        <% } %>

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="/public/css/home.css">
+        <script>
+            function openNav() {
+               document.getElementById("mySidebar").style.width = "250px";
+               document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+        </script>
+    </head>
+    <body>
+       
+        <div>
+            
+            <div>
+               <h1> <button class="openbtn" onclick="openNav()"><b>☰</b> </button>EXPENSE TRACKER SYSTEM</h1>
+               
+                <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <li>
+                <ol><a href="/profile">Profile</a></ol>
+                <ol><a href="/contactus">contact</a></ol>
+                <form method="POST" action="/logout">
+                  <button type="submit" class="btn btn-primary">Log out</button>
+              </form>
+                </li>
+              </div>
+              
+             
+              </div>
+               
+              
+              <div class="box">
+                <a href="/income" class="add" style="text-decoration: none; font-size: 30px;"><b>ADD INCOME</b></a>
+              </div>
+              <div class="box2">
+                <a href="/expenses" class="add"  style="text-decoration: none; font-size: 30px;"><b>ADD EXPENSES</b></a>
+              </div>
+        
+            </div>
+            
+        </div>
+    </body>
+   
+</html>

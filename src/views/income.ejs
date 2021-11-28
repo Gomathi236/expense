@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>INCOME</title>
+        <link rel="stylesheet" href="/public/css/income.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+    <body>
+    
+        <h1>SOURCE OF INCOME</h1><br/>
+       
+        <table>
+
+        <form method="POST" action="/income" class="form">
+           <tr> 
+              <td> 
+                  <label for="date"><b>Date :</b></label><br/>
+                </td>
+              <td> 
+                   <input type="date" id="date" name="date" class="input-field">
+                </td>
+            </tr>
+            <br/>
+            <tr>
+                <td>
+                    <label><b>Source Of Income :</b></label><br/>
+                </td>
+                <td>
+                    <select class="input-field" name="source">
+
+                        <option selected>--select--</option>
+                        <!-- <% if(errors) { %>
+                            <% errors.forEach((incometypes) => { %>
+                                <option class="alert"></option>
+                                    <%- item %>
+                                </div>
+                            <% }); %>
+                        <% } %>
+                        -->
+                        <option>employment income.</option>
+                         <option>   pension income.</option>
+                           <option> social security income.</option>
+                            <option>income.</option>
+                           <option> property income.</option>
+                            <option> investment income </option>
+                          <optio>  miscellaneous income.</option>      
+                    </select>
+                   &nbsp; &nbsp;&nbsp;<a href="/addsource"> <i class="fa fa-plus" style="font-size:24px"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="description" ><b>Description :</b></label><br/>
+                </td>
+                <td>
+                    <textarea class="input-field" name="description" ></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="amount"><b>Enter the Amount :</b></label><br/>
+                </td>
+                <td>
+                    <input type="number" id="amount" name="amount" class="input-field">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn">Save</button>
+
+                </td>
+               
+            </tr>
+        </form>
+        <td>
+            <a href="/home"><button class="btn">Cancel</button></a>
+
+           </td>
+        </table>
+       
+    </body>
+</html>

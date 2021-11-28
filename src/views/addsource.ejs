@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            Add Source
+        </title>
+        <link rel="stylesheet" href="/public/css/addsource.css">
+        <script>
+
+
+           
+        </script>
+    </head>
+    <body>
+        <h1>
+            ADD SOURCE
+        </h1>
+        <% if(message) {%>
+            <div>
+                <%= message %>
+            </div>
+            <%}%>
+        <div class="box">
+        <form class="form" method="POST" action="/income" >
+            <table>
+           <tr>
+               <td><label>Source Type:</label></td><br/>
+               <td><input type="text" id="type" class="input-field" name="type"></td>
+           </tr>
+        </table>
+       <button type="submit" class="btn">Save</button>
+        </form>
+        </div>
+    </body>
+</html>
