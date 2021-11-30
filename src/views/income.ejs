@@ -29,6 +29,14 @@
                     <select class="input-field" name="source">
 
                         <option selected>--select--</option>
+                         <% if(incomeTypes) { %>
+                            <% incomeTypes.forEach((incomeTypes) => { %>
+                                <option>
+                                    <%= incomeTypes.type %>
+                               </option>
+                            <% }); %>
+                            <% } %>
+                       
                        
                       
                         <option>employment income.</option>
